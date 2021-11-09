@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "4316c0f1-57e1-4907-a778-3cd4347f5f11",
+		"name": "Template Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/api/auth/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"user\": \"qwerty\",\r\n        \"pwd\": \"dasdasdas\",\r\n        \"name\": \"dante\",\r\n        \"last_name\": \"carlos\",\r\n        \"birthday\": \"2018-03-29T13:34:00.000\",\r\n        \"roles\":[\"admin\",\"moderatorn\",\"user\"]\r\n        \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/signup?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/auth/signup?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/usuarios/:userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/usuarios/6180c34cd915e6440c8b9bdc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"usuarios",
+						"6180c34cd915e6440c8b9bdc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"mnmnmnm\",\r\n    \"pwd\":\"1234562\",\r\n    \"name\":\"dante\",\r\n    \"last_name\":\"carlos\",\r\n    \"birthday\":\"2018-03-29T13:34:00.000\",\r\n    \"status\":\"activo\",\r\n    \"gener\":\"male\",\r\n    \"date_register\":\"2018-03-29T13:34:00.000\",\r\n    \"date_update\":\"2018-03-29T13:34:00.000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/usuarios/:userId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"dante\",\r\n    \"pwd\":\"1234562\",\r\n    \"name\":\"dante\",\r\n    \"last_name\":\"carlos\",\r\n    \"birthday\":\"2018-03-29T13:34:00.000\",\r\n    \"status\":\"activo\",\r\n    \"gener\":\"male\",\r\n    \"date_register\":\"2018-03-29T13:34:00.000\",\r\n    \"date_update\":\"2018-03-29T13:34:00.000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/usuarios/6180a66d37509e23646516f5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"usuarios",
+						"6180a66d37509e23646516f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/usuarios/:userId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODBlOWNlMGQ4OWMwMmY3NGI4MTViYyIsImlhdCI6MTYzNTg0NDQxNSwiZXhwIjoxNjM1OTMwODE1fQ.MziIpOZki9CkdAF3I_2gZDuAAXkBnoPclv7RCpMk9TU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/usuarios/6180a66f37509e23646516f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"usuarios",
+						"6180a66f37509e23646516f7"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODBmMmUzOGMzZWJkMzVjODIxN2RjNyIsImlhdCI6MTYzNTg0MzQxNCwiZXhwIjoxNjM1OTI5ODE0fQ.rUTIxVMvfwEK9cCgLXZExJVDgdkKAPYFmnTs6cCY-z0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
